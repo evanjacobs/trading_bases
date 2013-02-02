@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Play Squeeze!</title>
-    <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
-    <script type="text/javascript">
-      var pusher = new Pusher('<%= Pusher.key %>'); // uses your API KEY
-      var channel = pusher.subscribe('test_channel');
-      channel.bind('greet', function(data) {
-        alert(data.greeting);
-      });
-    </script>
+    <title>Trading Bases</title>
   </head>
 
   <body>
-    <h1>Game to be named later</h1>
+    <h1>Trading Bases</h1>
+
+    <div><a href="/game">Play game!</a></div>
   </body>
 </html>

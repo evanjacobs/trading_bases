@@ -1,5 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-require './squeeze.rb'
+require './trading_bases.rb'
 
 run Sinatra::Application
