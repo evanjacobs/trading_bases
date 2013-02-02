@@ -1,8 +1,8 @@
 source :rubygems
-gem 'sinatra'
 
-gem 'thin'
+gem 'sinatra', :git => "git://github.com/sinatra/sinatra.git"
 gem 'sinatra-activerecord'
+gem 'thin'
 gem 'pg'
 
 gem 'gameday_api'
