@@ -1,1 +1,1 @@
-web: bundle exec ruby squeeze.rb -p $PORT
+web: bundle exec ruby trading_bases.rb -p $PORT
