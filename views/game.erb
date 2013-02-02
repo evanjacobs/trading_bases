@@ -19,7 +19,7 @@
       });
 
         function update_results(data) {
-          $('#events').text(data.new_data);
+          $('.' + data.team).addClass(data.event);
         }
       });
     </script>
