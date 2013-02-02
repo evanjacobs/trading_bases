@@ -1,9 +1,9 @@
 require 'sinatra'
 require 'pusher'
 
-Pusher.app_id = 36615
-Pusher.key = 'a7777090afd53215b48f'
-Pusher.secret = '001963c7e6250d50d1a6'
+Pusher.app_id = 36617
+Pusher.key = 'c1c5221d995f9bec3010'
+Pusher.secret = '09d04d8fea0a1a6769ea'
 
 get '/' do
   erb :index
