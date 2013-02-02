@@ -2,9 +2,6 @@
 <html>
   <head>
     <title>Play Squeeze!</title>
-  </head>
-
-  <body>
     <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
     <script type="text/javascript">
       var pusher = new Pusher('<%= Pusher.key %>'); // uses your API KEY
@@ -13,7 +10,9 @@
         alert(data.greeting);
       });
     </script>
+  </head>
 
+  <body>
     <h1>Game to be named later</h1>
   </body>
 </html>
