@@ -9,6 +9,8 @@ gem 'gameday_api'
 gem 'pg_search'
 gem 'delayed_job_active_record'
 
+gem 'pusher'
+
 group :development do
   gem 'sqlite3'
 end

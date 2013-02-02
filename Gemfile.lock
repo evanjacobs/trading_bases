@@ -28,9 +28,13 @@ GEM
     pg_search (0.5.7)
       activerecord (>= 3)
       activesupport (>= 3)
+    pusher (0.11.2)
+      multi_json (~> 1.0)
+      signature (~> 0.1.6)
     rack (1.5.1)
     rack-protection (1.3.2)
       rack
+    signature (0.1.6)
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -54,6 +58,7 @@ DEPENDENCIES
   gameday_api
   pg
   pg_search
+  pusher
   sinatra
   sinatra-activerecord
   sqlite3
