@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Baseball, Monopoly, Hack" />
+  <meta name="description" content="Baseball Monopoly Hack" />
+	<link rel="stylesheet" type="text/css" href="hack.css" />
+  <title>Baseball Hack</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//js.pusher.com/1.12/pusher.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      var pusher = new Pusher('<%= Pusher.key %>'); // uses your API KEY
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('data-changed', function(data) {
+        update_results(data)
+      });
+
+        function update_results(data) {
+          $('#events').text(data.new_data);
+        }
+      });
+    </script>
+
+</head>
+<body>
+  <div class="mod" id="roster">
+  	<div class="hd">
+  		<h3>Roster</h3>
+  	</div>
+  	<div class="bd">
+  		<ul>
+  			<li>Brian</li>
+  			<li>Joe</li>
+  			<li>Eric</li>
+  		</ul>
+  	</div>
+  </div>
+  <div id="events">Events</div>
+  <div class="mod" id="fields">
+  	<div class="hd">
+  		<h3>Fields</h3>
+  	</div>
+  	<div class="bd">
+  		<div class="awayTeam">
+        <span class="ball">Ball</span>
+  			<ul>
+  				<li class="pitcher"><span>Pitcher</span></li>
+  				<li class="home"><span>Home</span></li>
+  				<li class="first"><span>First</span></li>
+  				<li class="second"><span>Second</span></li>
+  				<li class="third"><span>Third</span></li>
+  				<li class="shortStop"><span>Short Stop</span></li>
+  				<li class="center"><span>Center</span></li>
+  				<li class="right"><span>Right</span></li>
+  				<li class="left"><span>Left</span></li>
+  			</ul>
+  		</div>
+  		<div class="homeTeam">
+        <span class="ball">Ball</span>
+  			<ul>
+  				<li class="pitcher"><span>Pitcher</span></li>
+  				<li class="home"><span>Home</span></li>
+  				<li class="first"><span>First</span></li>
+  				<li class="second"><span>Second</span></li>
+  				<li class="third"><span>Third</span></li>
+  				<li class="shortStop"><span>Short Stop</span></li>
+  				<li class="center"><span>Center</span></li>
+  				<li class="right"><span>Right</span></li>
+  				<li class="left"><span>Left</span></li>
+  			</ul>
+  		</div>
+  	</div>
+  </div>
+</body>
+</html>
