@@ -690,6 +690,22 @@ header {
   border: 1px solid #DDCA00;
 }
 
+#feed .bd li .player1 {
+  color: #6B17CE;
+}
+
+#feed .bd li .player2 {
+  color: #3457FF;
+}
+
+#feed .bd li .player3 {
+  color: #F50B0B;
+}
+
+#feed .bd li .player4 {
+  color: #DDCA00;
+}
+
 /* Feed */
 #feed {
   clear: both;
