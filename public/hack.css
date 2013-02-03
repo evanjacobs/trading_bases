@@ -285,7 +285,7 @@ header h1,
 }
 
 /* Field positions */
-#fields .bd .field li {
+#fields .field li {
   border: 1px solid transparent;
   height: 3em;
   overflow: hidden;
