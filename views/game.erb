@@ -200,7 +200,6 @@
 	  
         setTimeout(function(){
           $('.' + data.team).removeClass(data.event);
-	  // TODO: change to next person at-bat
 	  p1_score.closest('li').removeClass('updated');
 	  p2_score.closest('li').removeClass('updated');
 	  p3_score.closest('li').removeClass('updated');
@@ -208,6 +207,14 @@
 	  $('.' + data.team).removeClass('hitHit');
 	  $('.' + data.team).removeClass('hitExtraBase');
 	  $('.' + data.team).removeClass('hitRun');
+
+	  if (data.next) {
+            var next = $('#roster .' + data.next + ' img').clone();
+            var at_bat = $('.' + data.team + ' .atBat span');
+            at_bat.html(next);
+            at_bat.append(next.attr('alt'));
+	  }
+	  
         }, 5000);
       }
     });
