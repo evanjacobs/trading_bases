@@ -87,6 +87,7 @@ header h1,
 
 /* Roster */
 #roster {
+  max-width: 400px;
   min-width: 275px;
   overflow: hidden;
 }
@@ -490,7 +491,6 @@ header h1,
   left: 50%;
 }
 
-#fields .bd li:hover, /* For testing */
 #fields .bd .hitCenter .center,
 #fields .bd .hitLeft .left,
 #fields .bd .hitRight .right,
