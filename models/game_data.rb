@@ -1,6 +1,5 @@
 require 'gameday'
 require 'nokogiri'
-require './atbat_parser'
 
 class GameData
   attr_accessor :game, :events
