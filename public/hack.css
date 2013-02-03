@@ -422,6 +422,7 @@ header h1,
 }
 
 #fields .bd .special li {
+  border: 1px solid transparent;
   padding: 2px;
 }
 
@@ -568,7 +569,7 @@ header h1,
 #fields .bd .hitHome .home,
 #fields .bd .hitHit .hit,
 #fields .bd .hitExtraBase .extraBase,
-#fields .bd .hitRun .hitRun {
+#fields .bd .hitRun .run {
   background: rgba(137,137,137,.3);
   border: 1px solid #898989;
 }
@@ -590,7 +591,7 @@ header h1,
 #fields .bd .hitHome .player1.home,
 #fields .bd .hitHit .player1.hit,
 #fields .bd .hitExtraBase .player1.extraBase,
-#fields .bd .hitRun .player1.hitRun {
+#fields .bd .hitRun .player1.run {
   background: rgba(107,23,206,.3);
   border: 1px solid #6B17CE;
 }
@@ -606,7 +607,7 @@ header h1,
 #fields .bd .hitHome .player2.home,
 #fields .bd .hitHit .player2.hit,
 #fields .bd .hitExtraBase .player2.extraBase,
-#fields .bd .hitRun .player2.hitRun {
+#fields .bd .hitRun .player2.run {
   background: rgba(52,87,255,.3);
   border: 1px solid #3457FF;
 }
@@ -622,7 +623,7 @@ header h1,
 #fields .bd .hitHome .player3.home,
 #fields .bd .hitHit .player3.hit,
 #fields .bd .hitExtraBase .player3.extraBase,
-#fields .bd .hitRun .player3.hitRun {
+#fields .bd .hitRun .player3.run {
   background: rgba(245,11,11,.3);
   border: 1px solid #F50B0B;
 }
@@ -638,7 +639,7 @@ header h1,
 #fields .bd .hitHome .player4.home,
 #fields .bd .hitHit .player4.hit,
 #fields .bd .hitExtraBase .player4.extraBase,
-#fields .bd .hitRun .player4.hitRun {
+#fields .bd .hitRun .player4.run {
   background: rgba(221,202,0,.3);
   border: 1px solid #DDCA00;
 }
