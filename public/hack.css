@@ -114,6 +114,10 @@ header h1,
   background: #DDCA00;
 }
 
+#bd {
+  overflow: hidden;
+}
+
 /* Roster */
 #roster {
   max-width: 400px;
@@ -678,12 +682,13 @@ header h1,
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
     body {
       font-size: 1.5em;
-      width: 500px;
+      margin: 0 auto;
+      width: 450px;
     }
 
     #fields {
       float: none;
-      width: 500px;
+      width: 450px;
     }
 
     #fields .bd {
@@ -693,10 +698,30 @@ header h1,
     #fields .bd .awayTeam,
     #fields .bd .homeTeam {
       height: 300px;
+      left: 3em;
+      top: 0;
       width: 300px;
     }
 
+    #fields .bd .special {
+      right: -20%;
+    }
+
+    #fields .bd .atBat {
+      left: -20%;
+    }
+
+    #fields .bd .special,
+    #fields .bd .atBat {
+      bottom: -20%;
+    }
+
     #roster {
-      max-width: 500px;
+      max-width: 450px;
+    }
+
+    #feed ol {
+      max-height: auto;
+      overflow-y: visible;
     }
 }
