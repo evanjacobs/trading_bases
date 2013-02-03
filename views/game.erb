@@ -6,25 +6,6 @@
   <meta name="description" content="Baseball Monopoly Hack" />
   <link rel="stylesheet" type="text/css" href="hack.css" />
   <title>Trading Bases</title>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//js.pusher.com/1.12/pusher.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-      var pusher = new Pusher('<%= Pusher.key %>');
-      var channel = pusher.subscribe('test_channel');
-      channel.bind('data-changed', function(data) {
-        update_results(data)
-      });
-
-        function update_results(data) {
-          $('.' + data.team).addClass(data.event);
-          $('#event_update').text(data.description);
-        }
-      });
-    </script>
-
 </head>
 <body>
   <div class="mod" id="roster">
@@ -76,5 +57,27 @@
       </div>
     </div>
   </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//js.pusher.com/1.12/pusher.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var pusher  = new Pusher('<%= Pusher.key %>'),
+          channel = pusher.subscribe('test_channel');
+
+      channel.bind('data-changed', function(data) {
+        update_results(data)
+      });
+
+      function update_results(data) {
+        $('.' + data.team).addClass(data.event);
+
+        setTimeout(function(){
+          $('.' + data.team).removeClass(data.event);
+        }, 5000);
+
+        $('#event_update').text(data.description);
+      }
+    });
+  </script>
 </body>
 </html>
