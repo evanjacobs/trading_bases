@@ -1,5 +1,6 @@
 require 'gameday'
 require 'nokogiri'
+require './atbat_parser'
 
 class GameData
   attr_accessor :game, :events
@@ -16,12 +17,22 @@ class GameData
     xml.search('team').each{|t| t.attr('home_team').eql?('true') ? home_team_name = t.attr('name') : visiting_team_name = t.attr('name')}
     puts "home: #{home_team_name}, visitor: #{visiting_team_name}"
 
+    parser = AtBatParser.new()
+
     xml.search('team[name="' + home_team_name + '"]//event').each do |e|
-      home[e.attr('inning')] << "#{e.attr('description')}"
+      text = e.attr('description')
+      home[e.attr('inning')] << {
+        "description" => "#{text}",
+        "data" => parser.parse_atbat(text)
+      }
     end
 
     xml.search('team[name="' + visiting_team_name + '"]//event').each do |e|
-      visitor[e.attr('inning')] << "#{e.attr('description')}"
+      text = e.attr('description')
+      visitor[e.attr('inning')] << {
+        "description" => "#{text}",
+        "data" => parser.parse_atbat(text)
+      }
     end
 
     @game = {"visitor" => visitor, "home" => home}
