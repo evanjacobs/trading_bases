@@ -687,24 +687,24 @@ header {
   body {
     font-size: 1.5em;
     margin: 0 auto;
-    width: 400px;
+    width: 350px;
   }
 
   #fields {
     float: none;
-    width: 400px;
+    width: 350px;
   }
 
   #fields .bd {
-    min-height: 400px;
+    min-height: 350px;
   }
 
   #fields .bd .awayTeam,
   #fields .bd .homeTeam {
-    height: 300px;
+    height: 250px;
     left: 2em;
     top: -15%;
-    width: 300px;
+    width: 250px;
   }
 
   #fields .bd .special {
@@ -721,7 +721,7 @@ header {
   }
 
   #roster {
-    max-width: 400px;
+    max-width: 350px;
   }
 
   #roster .ft {
