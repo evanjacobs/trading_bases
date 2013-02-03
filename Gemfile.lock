@@ -10,33 +10,12 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (3.2.11)
-      activesupport (= 3.2.11)
-      builder (~> 3.0.0)
-    activerecord (3.2.11)
-      activemodel (= 3.2.11)
-      activesupport (= 3.2.11)
-      arel (~> 3.0.2)
-      tzinfo (~> 0.3.29)
-    activesupport (3.2.11)
-      i18n (~> 0.6)
-      multi_json (~> 1.0)
-    arel (3.0.2)
-    builder (3.0.4)
     daemons (1.1.9)
-    delayed_job (3.0.5)
-      activesupport (~> 3.0)
-    delayed_job_active_record (0.3.3)
-      activerecord (>= 2.1.0, < 4)
-      delayed_job (~> 3.0)
     eventmachine (1.0.0)
     gameday_api (0.5.3)
-    i18n (0.6.1)
+    hpricot (0.8.6)
     multi_json (1.5.0)
-    pg (0.14.1)
-    pg_search (0.5.7)
-      activerecord (>= 3)
-      activesupport (>= 3)
+    nokogiri (1.5.2)
     pusher (0.11.2)
       multi_json (~> 1.0)
       signature (~> 0.1.6)
@@ -44,27 +23,19 @@ GEM
     rack-protection (1.3.2)
       rack
     signature (0.1.6)
-    sinatra-activerecord (1.2.1)
-      activerecord (~> 3.0)
-      sinatra (~> 1.0)
-    sqlite3 (1.3.7)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.3.3)
-    tzinfo (0.3.35)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  delayed_job_active_record
   gameday_api
-  pg
-  pg_search
+  hpricot
+  nokogiri
   pusher
   sinatra!
-  sinatra-activerecord
-  sqlite3
   thin

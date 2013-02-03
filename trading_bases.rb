@@ -1,8 +1,6 @@
 require 'sinatra'
-require 'sinatra/activerecord'
-require 'delayed_job'
-require 'delayed_job_active_record'
 require 'pusher'
+require './models/game_data'
 
 Pusher.app_id = ENV['PUSHER_APP_ID']
 Pusher.key = ENV['PUSHER_KEY']
