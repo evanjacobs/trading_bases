@@ -29,22 +29,22 @@
             </span>
           </div>
           <ul class="field">
-            <li class="pitcher player2"><span class="icon">Pitcher</span></li>
-            <li class="home player4"><span class="icon">Home</span></li>
-            <li class="first player3"><span class="icon">First</span></li>
-            <li class="second player3"><span class="icon">Second</span></li>
+            <li class="pitcher player4"><span class="icon">Pitcher</span></li>
+            <li class="home player1"><span class="icon">Home</span></li>
+            <li class="first player2"><span class="icon">First</span></li>
+            <li class="second player4"><span class="icon">Second</span></li>
             <li class="third player3"><span class="icon">Third</span></li>
-            <li class="shortStop player4"><span class="icon">Short Stop</span></li>
-            <li class="center player1"><span class="icon">Center</span></li>
+            <li class="shortStop player1"><span class="icon">Short Stop</span></li>
+            <li class="center player2"><span class="icon">Center</span></li>
             <li class="right player2"><span class="icon">Right</span></li>
-            <li class="left player1"><span class="icon">Left</span></li>
+            <li class="left player3"><span class="icon">Left</span></li>
           </ul>
           <div class="special">
             <h5>Special</h5>
             <ul>
-              <li class="hit player2"><span class="icon">Rebecca L.</span> Hit</li>
-              <li class="extraBase player3"><span class="icon">John M.</span> Extra Base</li>
-              <li class="run player1"><span class="icon">Peter C.</span> Run</li>
+              <li class="hit player3"><span class="icon">Rebecca L.</span> Hit</li>
+              <li class="extraBase player2"><span class="icon">John M.</span> Extra Base</li>
+              <li class="run player4"><span class="icon">Peter C.</span> Run</li>
             </ul>
           </div>
         </div>
@@ -162,6 +162,7 @@
       function update_field(data) {
         $('#fields .bd').removeClass('view' + data.team);
         $('#fields .bd').addClass('view' + data.change_sides);
+        $('<li>' + data.description + '</li>').insertBefore('#feed .bd ol li:first-child');
       }
   
       function update_results(data) {
@@ -186,6 +187,7 @@
           }
 
           $('<li>' + data.description + '</li>').insertBefore('#feed .bd ol li:first-child');
+
 	  if (data.player1 != p1_score.text()) {
 	    p1_score.text(data.player1);
 	    p1_score.closest('li').addClass('updated');
@@ -219,7 +221,7 @@
 
 	  if (data.next) {
             var next = $('#roster .' + data.next + ' img').clone();
-            var at_bat = $('.' + data.team + ' .atBat span');
+            var at_bat = $('.atBat span');	  
             at_bat.html(next);
             at_bat.append(next.attr('alt'));
 	  }
