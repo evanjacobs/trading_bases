@@ -426,7 +426,9 @@ class TestParser < Test::Unit::TestCase
         )
 
         assert_equal(
-            {:type => AtBatResult::HBP}
+            {:type => AtBatResult::HBP, :detail => nil},
+            parse_atbat("Derek Jeter hit by pitch."),
+            "Derek Jeter hit by pitch."
         )
     end
 end
