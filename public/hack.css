@@ -1,8 +1,8 @@
 /*
-Player 1: 6b17ce 107,23,206 
-Player 2: 2333ad 35,51,173 
-Player 3: 63a511 99,165,17
-Player 4: ddca00 221,202,0
+Player 1: 6B17CE 107,23,206 
+Player 2: 3457FF 52,87,255
+Player 3: F50B0B 245,11,11
+Player 4: DDCA00 221,202,0
 */
 
 html,
@@ -382,8 +382,8 @@ display: none; /* for now */
 #fields .bd .hitShortStop .player2.shortStop,
 #fields .bd .hitPitcher .player2.pitcher,
 #fields .bd .hitHome .player2.home {
-  background: rgba(35,51,173,.3);
-  border: 1px solid #2333AD;
+  background: rgba(52,87,255,.3);
+  border: 1px solid #3457FF;
 }
 
 #fields .bd .hitCenter .player3.center,
@@ -395,8 +395,8 @@ display: none; /* for now */
 #fields .bd .hitShortStop .player3.shortStop,
 #fields .bd .hitPitcher .player3.pitcher,
 #fields .bd .hitHome .player3.home {
-  background: rgba(99,165,17,.3);
-  border: 1px solid #63A511;
+  background: rgba(245,11,11,.3);
+  border: 1px solid #F50B0B;
 }
 
 #fields .bd .hitCenter .player4.center,
