@@ -91,7 +91,7 @@
               <span class="icon" title="Purple">Purple</span>
               <span class="quote">"Take it in the Mitt!"</span>
             </div>
-            <em>1450</em>
+            <em>650</em>
           </li>
           <li class="player2">
             <img src="images/player2.jpg" alt="Rebecca L." />
@@ -100,7 +100,7 @@
               <span class="icon" title="Blue">Blue</span>
               <span class="quote">"I like Corn"</span>
             </div>
-            <em>2384</em>
+            <em>200</em>
           </li>
           <li class="player3">
             <img src="images/player3.jpg" alt="John M." />
@@ -109,7 +109,7 @@
               <span class="icon" title="Red">Red</span>
               <span class="quote">"Up The Roid"</span>
             </div>
-            <em>1900</em>
+            <em>520</em>
           </li>
           <li class="player4">
             <img src="images/player4.jpg" alt="Charlie K." />
@@ -118,7 +118,7 @@
               <span class="icon" title="Yellow">Yellow</span>
               <span class="quote">"We Got Big Cows"</span>
             </div>
-            <em>14</em>
+            <em>220</em>
           </li>
         </ul>
       </div>
@@ -155,12 +155,34 @@
 
         setTimeout(function(){
           $('<li>' + data.description + '</li>').insertBefore('#feed .bd ol li:first-child');
-	  // TODO: update scores in roster
-	  // $('#roster .bd .player1 em').text()
+	  var p1_score = $('#roster .bd .player1 em');
+	  if (data.player1 != p1_score.text()) {
+	    p1_score.text(data.player1);
+	    p1_score.closest('li').addClass('updated');
+	  }
+
+	  var p2_score = $('#roster .bd .player2 em');
+	  if (data.player2 != p2_score.text()) {
+	    p2_score.text(data.player2);
+	    p2_score.closest('li').addClass('updated');
+	  }
+
+	  var p3_score = $('#roster .bd .player3 em');
+	  if (data.player3 != p3_score.text()) {
+	    p3_score.text(data.player3);
+	    p3_score.closest('li').addClass('updated');
+	  }
+
+	  var p4_score = $('#roster .bd .player4 em');
+	  if (data.player4 != p4_score.text()) {
+	    p4_score.text(data.player4);
+	    p4_score.closest('li').addClass('updated');
+	  }
         }, 2000);
 	  
         setTimeout(function(){
           $('.' + data.team).removeClass(data.event);
+	  // TODO: change to next person at-bat
         }, 5000);
       }
     });
