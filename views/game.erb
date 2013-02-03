@@ -129,11 +129,12 @@
       </div>
       <div class="bd">
         <ol>
+	  <li>FLY OUT to center field</li>
 	  <li>Top of 5th inning</li>
 	  <li>End of 4th inning</li>
-          <li>Ground out to first base</li>
-	  <li>Strike out</li>
-	  <li>Strike out</li>
+          <li>GROUND OUT to first base</li>
+	  <li>STRIKE OUT</li>
+	  <li>STRIKE OUT</li>
 	  <li>Bottom of 4th inning</li>
         </ol>
       </div>
@@ -159,6 +160,18 @@
         var p4_score = $('#roster .bd .player4 em');
   
         setTimeout(function(){
+          if (data.specialHit) {
+            $('.' + data.team).addClass('hitHit');
+          }
+
+          if (data.specialExtraBase) {
+            $('.' + data.team).addClass('hitExtraBase');
+          }
+
+          if (data.specialRun) {
+            $('.' + data.team).addClass('hitRun');
+          }
+
           $('<li>' + data.description + '</li>').insertBefore('#feed .bd ol li:first-child');
 	  if (data.player1 != p1_score.text()) {
 	    p1_score.text(data.player1);
@@ -188,6 +201,9 @@
 	  p2_score.closest('li').removeClass('updated');
 	  p3_score.closest('li').removeClass('updated');
 	  p4_score.closest('li').removeClass('updated');
+	  $('.' + data.team).removeClass('hitHit');
+	  $('.' + data.team).removeClass('hitExtraBase');
+	  $('.' + data.team).removeClass('hitRun');
         }, 5000);
       }
     });
