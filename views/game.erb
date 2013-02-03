@@ -155,6 +155,15 @@
         update_results(data)
       });
 
+      channel.bind('inning-ended', function(data) {
+        update_field(data)
+      });
+
+      function update_field(data) {
+        $('#fields .bd').removeClass('view' + data.team);
+        $('#fields .bd').addClass('view' + data.change_sides);
+      }
+  
       function update_results(data) {
         $('.' + data.team).addClass(data.event);
 
