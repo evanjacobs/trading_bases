@@ -422,6 +422,7 @@ header h1,
 }
 
 #fields .bd .special li {
+  border: 1px solid transparent;
   padding: 2px;
 }
 
