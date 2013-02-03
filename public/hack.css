@@ -81,6 +81,10 @@ header h1,
   text-transform: uppercase;
 }
 
+header {
+  display: none;
+}
+
 .mod .bd {
   background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmAQMAAACS83vtAAAABlBMVEUaGhoiIiJbxTWgAAAAdElEQVR4Xj3P3QlCMQyG4QwTDvS+I/RAw1lAd9BdJEIRrztBp9A7cSIDb+1deMjPFzF1UxmW9CHZi5+mtJCPbCGvKf5O2030W1r9yznlkGcZS47UQ+67L7GrhvhlCTWO0M8swk72I9wlA0I2ciLk5xekh9Qft/1Fea8vRfMAAAAASUVORK5CYII=) repeat 0 0;
 }
@@ -680,52 +684,52 @@ header h1,
 }
 
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-      font-size: 1.5em;
-      margin: 0 auto;
-      width: 400px;
-    }
+  body {
+    font-size: 1.5em;
+    margin: 0 auto;
+    width: 400px;
+  }
 
-    #fields {
-      float: none;
-      width: 400px;
-    }
+  #fields {
+    float: none;
+    width: 400px;
+  }
 
-    #fields .bd {
-      min-height: 350px;
-    }
+  #fields .bd {
+    min-height: 400px;
+  }
 
-    #fields .bd .awayTeam,
-    #fields .bd .homeTeam {
-      height: 300px;
-      left: 2em;
-      top: 0;
-      width: 300px;
-    }
+  #fields .bd .awayTeam,
+  #fields .bd .homeTeam {
+    height: 300px;
+    left: 2em;
+    top: -15%;
+    width: 300px;
+  }
 
-    #fields .bd .special {
-      right: 10%;
-    }
+  #fields .bd .special {
+    right: 0%;
+  }
 
-    #fields .bd .atBat {
-      left: -10%;
-    }
+  #fields .bd .atBat {
+    left: 0%;
+  }
 
-    #fields .bd .special,
-    #fields .bd .atBat {
-      bottom: -20%;
-    }
+  #fields .bd .special,
+  #fields .bd .atBat {
+    bottom: -35%;
+  }
 
-    #roster {
-      max-width: 400px;
-    }
+  #roster {
+    max-width: 400px;
+  }
 
-    #roster .ft {
-      margin: 1em auto;
-    }
+  #roster .ft {
+    margin: 1em auto;
+  }
 
-    #feed ol {
-      max-height: none;
-      overflow-y: visible;
-    }
+  #feed ol {
+    max-height: none;
+    overflow-y: visible;
+  }
 }
