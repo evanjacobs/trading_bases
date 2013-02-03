@@ -119,6 +119,8 @@ header {
 }
 
 #bd {
+  margin: 0 auto;
+  max-width: 978px;
   overflow: hidden;
 }
 
