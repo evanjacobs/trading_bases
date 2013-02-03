@@ -683,12 +683,12 @@ header h1,
     body {
       font-size: 1.5em;
       margin: 0 auto;
-      width: 450px;
+      width: 400px;
     }
 
     #fields {
       float: none;
-      width: 450px;
+      width: 400px;
     }
 
     #fields .bd {
@@ -698,17 +698,17 @@ header h1,
     #fields .bd .awayTeam,
     #fields .bd .homeTeam {
       height: 300px;
-      left: 3em;
+      left: 2em;
       top: 0;
       width: 300px;
     }
 
     #fields .bd .special {
-      right: -20%;
+      right: 10%;
     }
 
     #fields .bd .atBat {
-      left: -20%;
+      left: -10%;
     }
 
     #fields .bd .special,
@@ -717,11 +717,15 @@ header h1,
     }
 
     #roster {
-      max-width: 450px;
+      max-width: 400px;
+    }
+
+    #roster .ft {
+      margin: 1em auto;
     }
 
     #feed ol {
-      max-height: auto;
+      max-height: none;
       overflow-y: visible;
     }
 }
