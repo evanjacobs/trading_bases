@@ -85,6 +85,35 @@ header h1,
   background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmAQMAAACS83vtAAAABlBMVEUaGhoiIiJbxTWgAAAAdElEQVR4Xj3P3QlCMQyG4QwTDvS+I/RAw1lAd9BdJEIRrztBp9A7cSIDb+1deMjPFzF1UxmW9CHZi5+mtJCPbCGvKf5O2030W1r9yznlkGcZS47UQ+67L7GrhvhlCTWO0M8swk72I9wlA0I2ciLk5xekh9Qft/1Fea8vRfMAAAAASUVORK5CYII=) repeat 0 0;
 }
 
+/* Player Icons */
+.mod .icon {
+  border: 2px solid #FFF;
+  display: block;
+  height: .7em;
+  text-indent: -900px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: .7em;
+}
+
+.mod .player1 .icon {
+  background: #6B17CE;
+}
+
+.mod .player2 .icon {
+  background: #3457FF;
+}
+
+.mod .player3 .icon {
+  background: #F50B0B;
+}
+
+.mod .player4 .icon {
+  background: #DDCA00;
+}
+
 /* Roster */
 #roster {
   max-width: 400px;
@@ -110,6 +139,12 @@ header h1,
   border-radius: .2em;
 }
 
+#roster li .icon {
+  position: absolute;
+  right: 0;
+  top: .5em;
+}
+
 #roster li div {
   position: relative;
 }
@@ -133,36 +168,6 @@ header h1,
   font-weight: bold;
 }
 
-#roster li .icon {
-  border: 2px solid #FFF;
-  display: block;
-  height: .7em;
-  position: absolute;
-  right: 0;
-  text-indent: -900px;
-  top: .5em;
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: .7em;
-}
-
-#roster .player1 .icon {
-  background: #6B17CE;
-}
-
-#roster .player2 .icon {
-  background: #3457FF;
-}
-
-#roster .player3 .icon {
-  background: #F50B0B;
-}
-
-#roster .player4 .icon {
-  background: #DDCA00;
-}
 #roster li .quote {
   font-size: 80%;
   font-style: italic;
@@ -186,8 +191,18 @@ header h1,
   right: 0;
   text-align: right;
   top: 0;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
   vertical-align: middle;
   width: 3em;
+}
+
+#roster .updated em {
+  -moz-box-shadow: 0 0 25px 5px #C81111 inset;
+  -o-box-shadow: 0 0 25px 5px #C81111 inset;
+  -webkit-box-shadow: 0 0 25px 5px #C81111 inset;
+  box-shadow: 0 0 25px 5px #C81111 inset;
 }
 
 /* Field */
@@ -270,7 +285,7 @@ header h1,
 }
 
 /* Field positions */
-#fields .bd li {
+#fields .bd .field li {
   border: 1px solid transparent;
   height: 3em;
   overflow: hidden;
@@ -357,11 +372,62 @@ header h1,
   position: absolute;
 }
 
+#fields .bd .atBat h5 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#fields .bd .atBat span {
+  background-color: #393939;
+  border: 1px solid #CACACA;
+  -moz-border-radius: .2em;
+  -o-border-radius: .2em;
+  -webkit-border-radius: .2em;
+  border-radius: .2em;
+  display: block;
+  font-size: 80%;
+  height: 25px;
+  line-height: 25px;
+  padding: 2px .5em 2px 2px;
+  vertical-align: top;
+}
+
+#fields .bd .atBat img {
+  margin-right: .25em;
+  width: 25px;
+}
+
 /* Specials */
 #fields .bd .special {
   bottom: -10%;
   position: absolute;
   right: 0;
+}
+
+#fields .bd .special h5 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#fields .bd .special ul {
+  background-color: #393939;
+  border: 1px solid #CACACA;
+  -moz-border-radius: .2em;
+  -o-border-radius: .2em;
+  -webkit-border-radius: .2em;
+  border-radius: .2em;
+  display: block;
+  font-size: 80%;
+  padding: 2px;
+}
+
+#fields .bd .special li {
+  padding: 2px;
+}
+
+#fields .bd .special .icon {
+  float: left;
+  margin-right: .5em;
 }
 
 /* Ball hit */
@@ -499,7 +565,10 @@ header h1,
 #fields .bd .hitFirst .first,
 #fields .bd .hitShortStop .shortStop,
 #fields .bd .hitPitcher .pitcher,
-#fields .bd .hitHome .home {
+#fields .bd .hitHome .home,
+#fields .bd .hitHit .hit,
+#fields .bd .hitExtraBase .extraBase,
+#fields .bd .hitRun .hitRun {
   background: rgba(137,137,137,.3);
   border: 1px solid #898989;
 }
@@ -518,7 +587,10 @@ header h1,
 #fields .bd .hitFirst .player1.first,
 #fields .bd .hitShortStop .player1.shortStop,
 #fields .bd .hitPitcher .player1.pitcher,
-#fields .bd .hitHome .player1.home {
+#fields .bd .hitHome .player1.home,
+#fields .bd .hitHit .player1.hit,
+#fields .bd .hitExtraBase .player1.extraBase,
+#fields .bd .hitRun .player1.hitRun {
   background: rgba(107,23,206,.3);
   border: 1px solid #6B17CE;
 }
@@ -531,7 +603,10 @@ header h1,
 #fields .bd .hitFirst .player2.first,
 #fields .bd .hitShortStop .player2.shortStop,
 #fields .bd .hitPitcher .player2.pitcher,
-#fields .bd .hitHome .player2.home {
+#fields .bd .hitHome .player2.home,
+#fields .bd .hitHit .player2.hit,
+#fields .bd .hitExtraBase .player2.extraBase,
+#fields .bd .hitRun .player2.hitRun {
   background: rgba(52,87,255,.3);
   border: 1px solid #3457FF;
 }
@@ -544,7 +619,10 @@ header h1,
 #fields .bd .hitFirst .player3.first,
 #fields .bd .hitShortStop .player3.shortStop,
 #fields .bd .hitPitcher .player3.pitcher,
-#fields .bd .hitHome .player3.home {
+#fields .bd .hitHome .player3.home,
+#fields .bd .hitHit .player3.hit,
+#fields .bd .hitExtraBase .player3.extraBase,
+#fields .bd .hitRun .player3.hitRun {
   background: rgba(245,11,11,.3);
   border: 1px solid #F50B0B;
 }
@@ -557,7 +635,10 @@ header h1,
 #fields .bd .hitFirst .player4.first,
 #fields .bd .hitShortStop .player4.shortStop,
 #fields .bd .hitPitcher .player4.pitcher,
-#fields .bd .hitHome .player4.home {
+#fields .bd .hitHome .player4.home,
+#fields .bd .hitHit .player4.hit,
+#fields .bd .hitExtraBase .player4.extraBase,
+#fields .bd .hitRun .player4.hitRun {
   background: rgba(221,202,0,.3);
   border: 1px solid #DDCA00;
 }
