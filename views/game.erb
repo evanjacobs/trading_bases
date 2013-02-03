@@ -153,27 +153,28 @@
       function update_results(data) {
         $('.' + data.team).addClass(data.event);
 
+        var p1_score = $('#roster .bd .player1 em');
+        var p2_score = $('#roster .bd .player2 em');
+        var p3_score = $('#roster .bd .player3 em');
+        var p4_score = $('#roster .bd .player4 em');
+  
         setTimeout(function(){
           $('<li>' + data.description + '</li>').insertBefore('#feed .bd ol li:first-child');
-	  var p1_score = $('#roster .bd .player1 em');
 	  if (data.player1 != p1_score.text()) {
 	    p1_score.text(data.player1);
 	    p1_score.closest('li').addClass('updated');
 	  }
 
-	  var p2_score = $('#roster .bd .player2 em');
 	  if (data.player2 != p2_score.text()) {
 	    p2_score.text(data.player2);
 	    p2_score.closest('li').addClass('updated');
 	  }
 
-	  var p3_score = $('#roster .bd .player3 em');
 	  if (data.player3 != p3_score.text()) {
 	    p3_score.text(data.player3);
 	    p3_score.closest('li').addClass('updated');
 	  }
 
-	  var p4_score = $('#roster .bd .player4 em');
 	  if (data.player4 != p4_score.text()) {
 	    p4_score.text(data.player4);
 	    p4_score.closest('li').addClass('updated');
@@ -183,6 +184,10 @@
         setTimeout(function(){
           $('.' + data.team).removeClass(data.event);
 	  // TODO: change to next person at-bat
+	  p1_score.closest('li').removeClass('updated');
+	  p2_score.closest('li').removeClass('updated');
+	  p3_score.closest('li').removeClass('updated');
+	  p4_score.closest('li').removeClass('updated');
         }, 5000);
       }
     });
